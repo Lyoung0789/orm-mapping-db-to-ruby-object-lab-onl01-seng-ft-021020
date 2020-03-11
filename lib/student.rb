@@ -52,6 +52,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql)
+    bidning.pry
   end 
   
   def save
