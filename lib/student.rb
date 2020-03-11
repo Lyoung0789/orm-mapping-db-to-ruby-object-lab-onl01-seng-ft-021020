@@ -67,7 +67,7 @@ class Student
       WHERE grade = 10 
     
     SQL
-    
+    binding.pry 
     DB[:conn].execute(sql).each_with_index.map do |row, i|
       if i<num 
         self.new_from_db(row)
