@@ -69,7 +69,7 @@ class Student
     SQL
     binding.pry 
     DB[:conn].execute(sql).each_with_index.map do |row, i|
-      if i<num 
+      if i<=num 
         self.new_from_db(row)
       end 
     end
