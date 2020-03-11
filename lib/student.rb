@@ -65,6 +65,7 @@ class Student
       SELECT * 
       FROM students 
       WHERE grade = 10 
+    
     SQL
     
     DB[:conn].execute(sql).each_with_index.map do |row, i|
