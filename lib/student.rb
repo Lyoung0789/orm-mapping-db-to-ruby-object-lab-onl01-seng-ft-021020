@@ -64,14 +64,13 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students 
-      WHERE grade = 10 
-    
+      WHERE grade = 10 LIMIT ?
     SQL
     binding.pry 
-    DB[:conn].execute(sql).each_with_index.map do |row, i|
-      if i<num 
+    DB[:conn].execute(sql, num).map do |row|
+      
         self.new_from_db(row)
-      end 
+      
     end
     
   end 
