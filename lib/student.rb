@@ -64,7 +64,7 @@ class Student
     sql = <<-SQL
       SELECT * 
       FROM students 
-      WHERE grade = 10 LIMIT ?
+      WHERE grade = 10 
     SQL
     binding.pry 
     DB[:conn].execute(sql).map do |row|
